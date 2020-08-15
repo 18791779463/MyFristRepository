@@ -18,7 +18,7 @@ public class Yanghui {
         for (int i = 0; i < a.length; i++) {
             a[i] = new int[i + 1];
             a[i][0] = 1;
-            a[i][a[1].length-1] = 1;
+            a[i][a[i].length-1] = 1;
         }
          for (int i = 2; i < a.length; i++) {
             for (int j = 1; j < a[i].length-1; j++) {
@@ -30,9 +30,9 @@ public class Yanghui {
      public void print(int f) {
         for (int i = 0; i < a.length; i++) {
             for(int k = 0;k < a.length - i ; k ++)
-                System.put.print(" \t");
+                System.out.print(" \t");
             for (int j = 0; j < a[i].length; j++) {
-                System.out.print(a[i][j]+"\t");
+                System.out.print(a[i][j]+"\t \t");
             }
             System.out.println();
         }
@@ -55,13 +55,11 @@ public class Yanghui {
             for (int j = 0; j < a[i].length; j++) {
                 if(a[i][j] != 0)
                     System.out.print(a[i][j]+"\t");
-//                else
-//                    System.out.print("\t");
             }
             System.out.println();
         }
     }
-//}
+
 
     public static void main(String[] args) {
 
@@ -69,5 +67,12 @@ public class Yanghui {
         yanghui.print();
         System.out.println("-----------------------------------------------");
         yanghui.printz();
+
+        Yanghui yanghui1 = new Yanghui(9,1);
+        System.out.println("-----------------------------------------------");
+        yanghui1.print(0);
+        System.out.println("-----------------------------------------------");
+        yanghui1.printz();
+
     }
 }
